@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://hcaptcha.com/1/api.js" async defer type="a58b1ba90e21278a907c765b-text/javascript"></script>
+    <script type="a58b1ba90e21278a907c765b-text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "oqyrq6oe9b");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOMEWORK CMSP</title>
+    <link rel="stylesheet" href="./style.css"/>
+
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <h2 class="home"> HOMEWORK </h2>
+            <div class="form">
+                <div class="form-control">
+                    <label for="ra">RA</label>
+                    <input type="text" id="ra" name="ra" placeholder="RA + Dígito + UF" />
+                </div>
+                <div class="form-control">
+                    <label for="pwd">Senha</label>
+                    <input type="password" id="pwd" name="pwd" placeholder="Digite sua senha" />
+                </div>
+                <div class="form-buttons">
+                    <button onclick="playAudio(); verifyCaptcha('fazerlicaonormal')">
+                        Atividades Pendentes
+                    </button>
+                    <button onclick="playAudio(); verifyCaptcha('fazerlicaoatrasada')">
+                        Atividades Expiradas
+                    </button>
+                </div>
+            </div>
+            <div class="credits">
+                <span>criado por </span>
+                <a href="https://wa.me/5511989861582" class="allvesz">
+                    <img src="./homework.png" alt="" />
+                    <span> Allvesz </span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <audio id="background-audio">
+        <source src="./audio/musica.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <script>
+        function playAudio() {
+            var audio = document.getElementById('background-audio');
+            audio.play();
+        }
+
+        async function verifyCaptcha(funcName) {
+            const hcaptchaResponse = hcaptcha.getResponse();
+            if (hcaptchaResponse.length === 0) {
+                alert('Faz o captcha doidokkk');
+            } else {
+                const name = document.getElementById('ra').value;
+                const password = document.getElementById('pwd').value;
+
+                try {
+                    const response = await fetch('https://doritus.mmrcoss.tech/verify-captcha', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ name, password, hcaptchaResponse, funcName }),
+                    });
+                    const result = await response.json();
+                    // Trate o resultado aqui
+                } catch (error) {
+                    console.error('Erro:', error);
+                }
+            }
+        }
+    </script>
+</body>

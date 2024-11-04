@@ -1,0 +1,180 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('./images/fundo.png');
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+        .home {
+    position: relative; 
+    left: -20px; /* Ajuste conforme necessário */
+    margin-bottom: 20px;
+    font-size: 3em;
+    color: #C00000;
+    text-shadow: 0 0 10px #C00000, 0 0 20px #fff, 0 0 30px #C00000, 0 0 40px #fff;
+    font-family: "Rubik Wet Paint", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+        .container {
+        background-image: url('./images/fundo3.png');
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 60px;
+    width: 250px;
+    backdrop-filter: blur(5px); /* Adiciona desfoque ao fundo */
+}
+
+        .wrapper {
+            text-align: center;
+        }
+
+        h2.homework {
+            margin-bottom: 70px;
+            font-size: 5em;
+            color: #2196f3;
+        }
+
+        .form {
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.form-control {
+    margin-bottom: 15px;
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #EAB8E4 ;
+}
+
+.form-control input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid #000;
+    box-sizing: border-box;
+    font-size: 0.95em;
+    background-color: transparent;
+    color: #000;
+    font-family: "Playfair Display", serif; /* Use a fonte diretamente aqui */
+    font-weight: 700; /* Use o peso desejado */
+}
+
+.form-control input:focus {
+    border-bottom: 1px solid #000;
+    outline: none;
+}
+
+.button-container {
+    text-align: right;
+}
+
+.button-container button {
+    padding: 10px 15px;
+    background-color: #C00000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.button-container button:hover {
+    background-color: #A00000;
+}
+
+        .clear-btn {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .captcha-container {
+            margin: 20px 0;
+        }
+
+        .form-buttons button {
+            width: 48%;
+            padding: 10px;
+            background-color: #2196f3;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-buttons button {
+    /* Outros estilos do botão, se necessário */
+    color: #000; /* Altera a cor do texto, se desejado */
+    font-family: "Playfair Display", serif; /* Use a fonte diretamente aqui */
+    font-weight: 700; /* Use o peso desejado */
+}
+
+.form-buttons button:hover {
+    background-color: #c00;
+    text-shadow: 0 0 10px #C00000, 0 0 20px #fff, 0 0 30px #C00000, 0 0 40px #fff; /* Mesma sombra do .home */
+}
+        .credits {
+            margin-top: 20px;
+        }
+
+        .credits a {
+            text-decoration: none;
+            color: #2196f3;
+        }
+
+        .overlay {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .close-button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            float: right;
+        }
+
+        .donate-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .donate-button:hover {
+            background-color: #fb8c00;
+        }
